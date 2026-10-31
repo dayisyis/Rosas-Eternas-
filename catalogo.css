@@ -1,0 +1,198 @@
+
+/* CONFIGURACION GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F8F7FA;
+}
+
+
+/* ENCABEZADO */
+
+.encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 7%;
+    background-color: #E8E2F0;
+}
+
+.encabezado h1 {
+    color: #80549A;
+    font-size: 25px;
+}
+
+nav {
+    display: flex;
+    gap: 25px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 15px;
+    border-radius: 6px;
+}
+
+nav a:hover,
+nav .activo {
+    background-color: #A98BC4;
+    color: white;
+}
+
+
+/* TITULO DEL CATALOGO */
+
+.catalogo {
+    padding: 35px 7%;
+}
+
+.catalogo h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+.descripcion {
+    text-align: center;
+    color: #666;
+    margin-bottom: 35px;
+}
+
+
+/* PRODUCTOS */
+
+.contenedor-productos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+
+/* TARJETAS */
+
+.producto {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background-color: white;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+}
+
+
+/* IMAGENES */
+
+.producto img {
+    width: 45%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+/* INFORMACION */
+
+.informacion {
+    flex: 1;
+}
+
+.informacion h3 {
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.informacion p {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.informacion h4 {
+    margin-bottom: 12px;
+    font-size: 16px;
+}
+
+
+/* BOTON WHATSAPP */
+
+.btn-whatsapp {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #9664BD;
+    color: white;
+    padding: 9px 12px;
+    border-radius: 7px;
+    font-size: 12px;
+}
+
+.btn-whatsapp:hover {
+    background-color: #754A99;
+}
+
+
+/* ADAPTACION A CELULARES */
+
+@media (max-width: 700px) {
+
+    .encabezado {
+        padding: 18px;
+    }
+
+    .encabezado h1 {
+        font-size: 20px;
+    }
+
+    nav {
+        gap: 5px;
+    }
+
+    nav a {
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    .catalogo {
+        padding: 30px 15px;
+    }
+
+    .catalogo h2 {
+        font-size: 24px;
+    }
+
+    .contenedor-productos {
+        grid-template-columns: 1fr;
+    }
+
+    .producto img {
+        height: 160px;
+    }
+
+}
+
+@media(max-width: 480px) {
+    .producto {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .producto img {
+        width: 100%;
+        height: 220px;
+    }
+
+    .informacion {
+        padding: 10px;
+    }
+
+    .btn-whatsapp {
+        text-align: center;
+    }
+}
